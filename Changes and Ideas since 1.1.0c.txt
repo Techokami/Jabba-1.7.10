@@ -1,0 +1,21 @@
+TODO/Ideas:
+- New dolly to clone barrel with upgrades(maybe inventory also?), admin only, no recipe(shift right click to add clone, regular right click makes copies of stored item).
+  As this will be a clone dolly, was thinking of making it also have an easter egg of when shift right clicking on empty ground with no stored item it could spawn a sheep named "Dolly"
+- Creative core, costs 120 slots. when applied the barrel will no longer decrement stored item count when pulled from(by hand or automated)
+    Not craftable, or go crazy and require a nether star? =D  nah... just not craftable and op/admin only.
+
+Done:
+- Added a creative tab for JABBA; it has more items on it than some vanilla tabs
+- Moved the core upgrade code out of the tile entity, that class was getting a little unwieldy to work with...
+- Did some work to further modularize the core upgrades, also added descriptions to core upgrade item tooltips
+- changed TE save version to 4, UpgradeCore.NONE isn't needed anymore so the values shifted down by one
+- Used new core upgrade functionality to add x3, x9, x27 size storage upgrades
+- Finished localizing the remaining strings, I think.  This affects items tooltips and WAILA mostly
+- Added a Void core upgrade, costs 2 slots. When installed, any excess incoming items over the barrels storage capacity are deleted.
+    Tested with double right clicking to empty inventory
+    Automation tested with Barrel Hopping upgrades, Vanilla Hoppers, and BC pipes
+- Added Void Hammer to work with the new upgrade type 
+- Recipes for the new core upgrades:
+    For storage they are shapeless 3 of the previous tier, reversible
+    For void core it is two pistons and obsidian
+- Changed the double right click method to use getTotalWorldTime instead of getWorldTime.  This allows for it to function on servers where the gamerule doDaylightCycle is false

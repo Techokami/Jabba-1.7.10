@@ -1,0 +1,28 @@
+v1.1 - 20140201
+
++ Localization.
++ Optimization of the network code to minimize the amount of sent data.
++ Stacks should drop properly from barrels when hit with a low angle.
++ Unless they have a hopper core upgrade, barrels do not tick anymore
++ Complete rework of the upgrade system.
+    - Tiers are now called structural upgrades. They don't require the previous tier to craft but still require to be applied in order.
+    - Structural upgrades open slots for core upgrades.
+    - Core upgrades are applied to add fonctionnalities to the barrels.
+    - Storage upgrade will add 64 stacks of storage and takes one slot
+    - Redstone upgrade let the barrel emit redstone on the faces with a Redstone facade
+    - Hopper upgrade let the barrel auto output on the sides with hopper facades
+    - BSpace upgrade let the player sync multiple barrels
+    - Side upgrades are used to specify which side is active for a given core (Redstone, hopper). They do not take slots
+    - Stickers are now side upgrades.
+    - It is possible to remove upgrades using the hammer. The hammer can be configured to remove a given core upgrade by shift+clicking when not looking at a barrel.
+    - Upgrades applied to a barrel can be seen when holding an upgrade, the tuning fork or the hammer in your hand.
++ All recipes are now using the OreDict whenever possible
++ Structural upgrade recipes can be configured to a specific material in the config file. Giving less then 7 values will restrict the maximum tier.
++ Stickers can now be applied on top and bottom. The display will be aligned with the front of the barrel.
++ Full rework of the rendering to make it easier on low end cards. Everything beside the stack and text is now cached and recalculated only on demand.
++ Amount of items in the barrels is now using different colors depending on the barrel texture to maximise contrast.
++ Glint as been removed for magical items to prevent a rendering bug (might be reactivated once a solution is found)
++ Diamond dolly has been added. It will allow players to move spawners around. Each time a spawner is moved, the dolly will take 1 dmg and can be used 6 times.
++ Fixed a bug with some multiblock chests from BetterStorage.
++ Dollies will now show in their tooltip what they are transporting.
++ More things and bugfixes I surely forgot.
